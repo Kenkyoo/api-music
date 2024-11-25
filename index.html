@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-mdb-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="home">
+        <nav style="z-index: 1; min-height: 58.59px;" class="navbar navbar-expand-md fixed-top navbar-before-scroll shadow-0" id="navbar">
+            <div class="container">
+                <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <i class="fa-solid fa-music text-secondary"></i>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary fw-bold" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary fw-bold" href="#search">Buscar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary fw-bold" href="#popular">Popular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary fw-bold" href="#tops">Tops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary fw-bold" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a class="text-secondary me-3" href="https://www.youtube.com/c/Mdbootstrap/videos" rel="nofollow" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a class="text-secondary me-3" href="https://twitter.com/ascensus_mdb" rel="nofollow" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-secondary me-3" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-image" style="background-image: url('images/bg-image.jpeg'); height: 100vh;">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="d-flex flex-column justify-content-center align-items-center gap-2 h-100">
+                    <h1 class="text-white mb-0">Melodify</h1>
+                    <h3 class="text-white">Descubre, Conéctate y Vibra con los Mejores Artistas y Canciones del Momento</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="search">
+            <div class="container mt-4">
+                <div class="text-center mb-5">
+                    <h3>Busqueda por artista o canción</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-8 mb-5">
+                        <div class="form-outline" data-mdb-input-init>
+                            <input type="search" id="form1" class="form-control" placeholder="ej. Lady Gaga, Believe, Billie Eilish, Creep..." aria-label="Search" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <ul class="list-group list-group-light" id="results"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="popular">
+            <div class="container-fluid p-3">
+                <div class="text-center mb-5 p-3">
+                    <h3>Top Mundial</h3>
+                </div>
+                <div class="row g-5">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="container">
+                            <div class="text-center mb-4">
+                                <h5 class="mb-4">Los artistas más escuchados</h5>
+                                <img src="images/billie-ellish.jpg" class="img-fluid rounded-circle object-cover" alt="Billie Eilish" style="width: 200px; height: 200px;"/>
+                            </div>
+                            <ol class="list-group list-group-light list-group-numbered" id="artists"></ol>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="container">
+                            <div class="text-center mb-4">
+                                <h5 class="mb-4">Las canciones más escuchadas</h5>
+                                <img src="images/sabrina-carpenter.jpg" class="img-fluid rounded-circle object-cover" alt="Sabrina Carpenter" style="width: 200px; height: 200px;" />
+                            </div>
+                            <ol class="list-group list-group-light list-group-numbered" id="tracks"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tops">
+            <div class="container mt-4">
+                <div class="bg-image object-cover" style="background-image: url('images/10446329.jpg'); height: 30vh; width: 100%;">
+                    <div class="mask gradient-custom">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <h1 class="text-white mb-0">El Top de cada país</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-8 mt-3 mb-5">
+                        <div class="text-center">
+                            <select data-mdb-select-init name="countries" id="select"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div id="container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-center" id="contact">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i class="fab fa-github"></i></a>
+            </section>
+        </div>
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2020 Copyright:
+            <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.1/mdb.umd.min.js"></script>
+</body>
+</html>
+

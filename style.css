@@ -1,0 +1,106 @@
+:root {
+  --arrow-bg: rgba(255, 255, 255, 0.3);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  background-color: black;
+}
+/* Color of the links BEFORE scroll */
+.navbar-before-scroll .nav-link,
+.navbar-before-scroll .navbar-toggler-icon {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-after-scroll .nav-link,
+.navbar-after-scroll .navbar-toggler-icon {
+  color: #4f4f4f;
+}
+/* Color of the navbar AFTER scroll */
+.navbar-after-scroll {
+  background-color: #fff;
+}
+
+/* Transition after scrolling */
+.navbar-after-scroll {
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* Transition to the initial state */
+.navbar-before-scroll {
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-before-scroll.navbar-after-scroll {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Navbar on mobile */
+@media (max-width: 991.98px) {
+  #main-navbar {
+    background-color: #fff;
+  }
+
+  .nav-link,
+  .navbar-toggler-icon {
+    color: #4f4f4f !important;
+  }
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #a18cd1;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.6),
+    rgba(91, 14, 214, 0.6) 100%
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.6),
+    rgba(91, 14, 214, 0.6) 100%
+  );
+}
+
+select {
+  /* Reset */
+  appearance: none;
+  border: 1px solid black;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 80%;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
