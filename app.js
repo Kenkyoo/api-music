@@ -1,5 +1,5 @@
 const api_key = "&api_key=79a57f7023a6d4a70b5f7cb4030e3861";
-const apiRootUrl = "http://ws.audioscrobbler.com/2.0?";
+const apiRootUrl = "https://ws.audioscrobbler.com/2.0?"; // Cambia a HTTPS
 const format = "&format=json";
 
 function urlConstructor(method) {
